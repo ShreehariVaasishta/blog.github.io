@@ -2,3 +2,6 @@ db.sqlite3
 virtualenv__pycache__
 *.pyc
 virtualenv
+*~
+/static
+.DS_Store
