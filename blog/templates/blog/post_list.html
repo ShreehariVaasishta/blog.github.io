@@ -2,13 +2,23 @@
 
 {% block content %}
     {% for post in posts %}
-        <div class="post">
+      <div class="row">
+    <div class="col s12 m20">
+      <div class="card" >
+        <div class="card-content white-text">
+        <div class="post" style="color:teal;">
+            <h1><a href="{% url 'post_detail' pk=post.pk %} " style="color:teal;">{{ post.title }}</a></h1>
                 <div class="date">
-                    <p>published: {{ post.published_date }}</p>
+                    <h6 style="font-size:100%;">published by :{{ post.author }}</h6>
+                    <h6 style="font-size:100%;">published on: {{ post.published_date }}</h6>
                 </div>
-                <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                    <blockquote>
                 <p>{{ post.text|linebreaksbr }}</p>
-            </div>
+            </blockquote>
         </div>
+    </div>
+</div>
+</div>
+</div>
     {% endfor %}
 {% endblock %}

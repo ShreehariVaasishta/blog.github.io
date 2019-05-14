@@ -1,16 +1,22 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+
     <div class="post">
         {% if post.published_date %}
-            <div class="date">
+            <div class="date" >
                 {{ post.published_date }}
             </div>
         {% endif %}
-        {% if user.is_authenticated %}
-            <a class="btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class ="glyphicon glyphicon-pencil"></span></a>
-        {% endif %}
-        <h2>{{ post.title }}</h2>
-        <p>{{ post.text|linebreaksbr }}</p>
+
+        <div class="col-md-8">
+        <h2 style="color:#f4415f;">{{ post.title }} </h2>
+            <div  class="card-panel light-blue lighten-5">
+        <p style="color:#6a1b9a;">{{ post.text|linebreaksbr }}</p>
     </div>
+     </div>
+    </div>
+            {% if user.is_authenticated %}
+            <a class="waves-effect waves-light btn left" href="{% url 'post_edit' pk=post.pk %}">Edit<i class="material-icons right">brush</i></a>
+        {% endif %}
 {% endblock %}
