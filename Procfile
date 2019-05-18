@@ -1,2 +1,2 @@
-web: gunicorn djangovue.wsgi --log-file -
+web: gunicorn djangovue.wsgi
 
