@@ -1,2 +1,2 @@
-web: gunicorn djangovue.wsgi
+web: gunicorn mysite.wsgi
 
