@@ -3,6 +3,7 @@
 {% block content %}
 
     <div class="post">
+        <img src="{{ post.image_url }}">
         {% if post.published_date %}
             <div class="date" >
                 {{ post.published_date }}
@@ -16,7 +17,7 @@
     </div>
      </div>
     </div>
-            {% if user.is_authenticated %}
+            {% if user.is_authenticated and user == post.author %}
             <a class="waves-effect waves-light btn left" href="{% url 'post_edit' pk=post.pk %}">Edit<i class="material-icons right">brush</i></a>
         {% endif %}
 {% endblock %}

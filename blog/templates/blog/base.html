@@ -14,17 +14,21 @@
 
     </head>
     <body>
-        <nav class="blue-grey darken-4">
+        <nav class="light-blue darken-4">
             <div class="nav-wrapper" >
-                <a href="home" class="brand-logo">My Blog</a>
-                      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="login/">Login</a></li>
-    </ul>
-            {% if user.is_authenticated %}
-            <ul class="right hide-on-med-and-down">                
-                <li><a href="{% url 'post_new' %}">Add Post<i class="material-icons left">add</i></a></li>
-                <li><a href="logout/">Logout</a></li>
+                <a href="#!" class="brand-logo"><i class="material-icons">center_focus_strong</i>Blog</a>
             </ul>
+            {% if user.is_authenticated %}            
+            <ul class="right hide-on-med-and-down">                      
+            <li><a href="{% url 'post_new' %}">Add Post<i class="material-icons left">add</i></a></li>
+            <li><a href="logout/"><i class="material-icons right">exit_to_app</i>Logout</a></li>
+            <li><i class="material-icons right ">account_circle</i>{{ user.username }}</li>             
+         </ul>
+                {% else %}
+                <ul class="right hide-on-med-and-down">                
+                <li><a href="login/">Login<i class="material-icons left">person_pin</i></a></li>
+                <li><a href="register/">Register<i class="material-icons left">account_circle</i></a></li>
+            </ul>            
             {% endif %}
         </div>
         </nav>
@@ -43,6 +47,8 @@
     {% endif %}
             <div class="container">
                 <br>
+                {% load static %}
+
                 {% block content %}
                 {% endblock %}
             </div>
