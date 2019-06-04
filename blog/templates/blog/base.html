@@ -29,27 +29,18 @@
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
             </ul>
             {% if user.is_authenticated %}            
-            <ul class="right hide-on-med-and-down">                      
+            <ul class="right hide-on-med-and-down"> 
+            <ul class="sidenav" id="mobile-demo">                     
             <li><a href="{% url 'post_new' %}">Add Post<i class="material-icons left">add</i></a></li>
             <li><a href="/logout"><i class="material-icons right">exit_to_app</i>Logout</a></li>
             <li><i class="material-icons right ">account_circle</i>{{ user.username }}</li>             
-         </ul>
                 {% else %}
                 <ul class="right hide-on-med-and-down">                
                 <li><a href="/login">Login<i class="material-icons left">person_pin</i></a></li>
                 <li><a href="/register">Register<i class="material-icons left">account_circle</i></a></li>
-            </ul>            
+            </ul>           
             {% endif %}
-        </div>
-          <ul class="sidenav" id="mobile-demo">
-            {% if user.is_authenticated %}
-            <li><a href="{% url 'post_new' %}">Add Post<i class="material-icons left">add</i></a></li>
-            <li><a href="/logout"><i class="material-icons right">exit_to_app</i>Logout</a></li>
-            <li><i class="material-icons right ">account_circle</i>{{ user.username }}</li>
-            {% else %}
-            <li><a href="/login">Login<i class="material-icons left">person_pin</i></a></li>
-            <li><a href="/register">Register<i class="material-icons left">account_circle</i></a></li>
-  </ul>
+        </div>  
         </nav>
             {% if messages %}
         {% for message in messages %}
@@ -61,10 +52,11 @@
                 <script>M.toast({html: "{{message}}", classes: 'orange rounded', displayLength:10000});</script>
             {% elif message.tags == 'error'%}
                 <script>M.toast({html: "{{message}}", classes: 'red rounded', displayLength:10000});</script>
-            {% endif %}
+                {% endif %}
         {% endfor %}
-    {% endif %}
-    {% endif %}
+        {% endif %}
+
+        
             <div class="container">
                 <br>
                 {% load static %}
