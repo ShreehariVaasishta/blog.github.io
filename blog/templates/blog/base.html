@@ -27,7 +27,6 @@
                 <a href="/" class="brand-logo"><i class="material-icons">center_focus_strong</i>Blog</a>
                 <a href="/" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-            </ul>
             {% if user.is_authenticated %}            
             <ul class="right hide-on-med-and-down"> 
             <ul class="sidenav" id="mobile-demo">                     
@@ -38,7 +37,7 @@
                 <ul class="right hide-on-med-and-down">                
                 <li><a href="/login">Login<i class="material-icons left">person_pin</i></a></li>
                 <li><a href="/register">Register<i class="material-icons left">account_circle</i></a></li>
-            </ul>           
+            </ul>  </ul></ul></ul>     
             {% endif %}
         </div>  
         </nav>
