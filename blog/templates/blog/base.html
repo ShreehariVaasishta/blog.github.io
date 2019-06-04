@@ -32,12 +32,14 @@
             <ul class="sidenav" id="mobile-demo">                     
             <li><a href="{% url 'post_new' %}">Add Post<i class="material-icons left">add</i></a></li>
             <li><a href="/logout"><i class="material-icons right">exit_to_app</i>Logout</a></li>
-            <li><i class="material-icons right ">account_circle</i>{{ user.username }}</li>             
+            <li><i class="material-icons right ">account_circle</i>{{ user.username }}</li> 
+            </ul>    </ul>        
                 {% else %}
+                <ul class="sidenav" id="mobile-demo">
                 <ul class="right hide-on-med-and-down">                
                 <li><a href="/login">Login<i class="material-icons left">person_pin</i></a></li>
                 <li><a href="/register">Register<i class="material-icons left">account_circle</i></a></li>
-            </ul>  </ul></ul></ul>     
+            </ul>  </ul></ul>
             {% endif %}
         </div>  
         </nav>
