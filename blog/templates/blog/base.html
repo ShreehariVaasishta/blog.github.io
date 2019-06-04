@@ -35,7 +35,6 @@
             <li><i class="material-icons right ">account_circle</i>{{ user.username }}</li> 
             </ul>      
                 {% else %}
-                <ul class="right hide-on-med-and-down">                
                 <li><a href="/login">Login<i class="material-icons left">person_pin</i></a></li>
                 <!--<li><a href="/register">Register<i class="material-icons left">account_circle</i></a></li>-->
             {% endif %}
@@ -54,7 +53,6 @@
             {% endif %}
         </ul> 
         </nav>
-          <nav>
 
             {% if messages %}
         {% for message in messages %}
