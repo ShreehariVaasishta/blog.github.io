@@ -27,6 +27,11 @@
             <nav class="light-blue darken-4">
             <div class="nav-wrapper" >
                 <a href="/" class="brand-logo"><i class="material-icons">center_focus_strong</i>Blog</a>
+                {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}">Add Post<i class="material-icons left">add</i></a>                
+                {% else %}
+                <a href="/login" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+                {% endif %}
                 <a href="/login" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
             {% if user.is_authenticated %} 
