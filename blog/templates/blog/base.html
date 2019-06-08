@@ -29,9 +29,9 @@
                 <a href="/" class="brand-logo"><i class="material-icons">center_focus_strong</i>Blog</a>
                 {% if user.is_authenticated %}
                 <a href="{% url 'post_new' %}">Add Post<i class="material-icons left">add</i></a>  
-                <a href="/logout" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">exit_to_app</i></a>              
+                <a href="/logout" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">exit_to_app</i>Logout</a>              
                 {% else %}
-                <a href="/login" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">person_pin</i></a>
+                <a href="/login" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">person_pin</i>Login</a>
                 {% endif %}
                 <ul class="right hide-on-med-and-down">
             {% if user.is_authenticated %} 
