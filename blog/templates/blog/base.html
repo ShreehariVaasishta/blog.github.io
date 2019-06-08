@@ -32,7 +32,6 @@
                 {% else %}
                 <a href="/login" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
                 {% endif %}
-                <a href="/login" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
             {% if user.is_authenticated %} 
             <li><a href="{% url 'post_new' %}">Add Post<i class="material-icons left">add</i></a></li>
