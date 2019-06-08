@@ -29,6 +29,7 @@
                 <a href="/" class="brand-logo"><i class="material-icons">center_focus_strong</i>Blog</a>
                 {% if user.not_authenticated %}
                 <a href="/login" class="brand-logo right">Login<i class="material-icons left">person_pin</i></a>
+                {% endif %}
                 <ul class="right hide-on-med-and-down">
             {% if user.is_authenticated %} 
             <li><a href="{% url 'post_new' %}">Add Post<i class="material-icons left">add</i></a></li>
