@@ -31,6 +31,6 @@ jobs:
     - name: Tests
       run: |
         python manage.py test
-    - name: Run migrations
-        run: |
-          python manage.py migrate
+    - name: Tests
+      run: |
+        python manage.py test
